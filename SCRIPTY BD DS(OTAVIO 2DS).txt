@@ -1,0 +1,16 @@
+CREATE TABLE personagens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    status_per ENUM('VIVO', 'MORTO', 'DESAPARECIDO') NOT NULL,
+    afiliacao ENUM(
+        'RECONHECIMENTO', 'MILITAR', 'GUARNICAO', 'CORPO DE TREINAMENTO', 
+        'MILITARES MARLEYANOS', 'MILITARES', 'NOBREZA', 'CIVIS', 
+        'JAEGERISTAS', 'TITAS', 'LENDAS', 'OUTRO'
+    ) NOT NULL,
+    idade INT,
+    altura INT,
+    especieHum VARCHAR(255) DEFAULT FALSE,
+    especieTitaRac VARCHAR(255) DEFAULT FALSE,
+    especieTita VARCHAR(255) DEFAULT FALSE,
+    especieOutro VARCHAR(255) DEFAULT FALSE
+);
